@@ -91,9 +91,11 @@ p {
     font-size: $h6-font-size;
     letter-spacing: .25rem;
     opacity: 1;
+    transform: scale(1);
+    transition: .25s;
 
     &:hover {
-        background: $primary;
+        transform: scale(1.1)
     }
 }
 
@@ -105,6 +107,7 @@ p {
     height: 3rem;
     opacity: 1;
     cursor: pointer;
+    transition: .25;
 
     &:hover {
         opacity: .5;
@@ -131,6 +134,15 @@ p {
     cursor: pointer;
 }
 
+.social-icon {
+    transform: scale(1);
+    transition: .25s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
 #title{
     opacity: 0;
     transition: 1s;
@@ -138,8 +150,13 @@ p {
 
 #moreDetails{
     opacity: 0;
-    transition: 1s;
+    transition: opacity 1s, padding-top 1s, transform .25s;
     padding-top: 20vh;
+    transform: scale(1);
+
+    &:hover {
+        transform: scale(1.1);
+    }
 }
 
 #details {
